@@ -5,15 +5,20 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../component/layout/navbar";
 import { Fragment, useState } from "react";
 import Footer from "../component/layout/footer";
-import boat2 from "../public/boat2.jpeg";
-import boat3 from "../public/boat3.jpeg";
 import boat4 from "../public/boat4.jpeg";
-import yacht1 from "../public/yacht1.jpeg";
-import yacht2 from "../public/yacht2.jpeg";
-import yacht3 from "../public/yacht3.jpeg";
+import drone from "../public/drone.jpeg";
+import ship from "../public/ship.jpeg";
 import main1 from "../public/mainPage1.jpg";
-import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import car from "../public/car.jpeg";
+import drone6 from "../public/drone6.png";
 import OnImageText from "../component/common/onimagetext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { BiBasket, BiErrorAlt, BiPhoneCall } from "react-icons/bi";
 
 const Home: NextPage = () => {
   const [imageIndex, setImageIndex] = useState(1);
@@ -30,9 +35,10 @@ const Home: NextPage = () => {
     //나누기 이미지 개수
     console.log(imageIndex);
   };
+  const bullet = ["first", "second", "third"];
 
   return (
-    <Fragment>
+    <div>
       <Head>
         <title>Blue Whale</title>
         <meta name="title" property="og:title" content="BlueWhale" />
@@ -44,36 +50,74 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;500;700;800&family=PT+Sans:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;500;700;800&family=IBM+Plex+Sans+KR:wght@300;400&family=Noto+Sans+KR:wght@300;400&family=PT+Sans:wght@700&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
+
       <Navbar />
 
-      <section>
-        <div className="relative text-center bg-gray-50">
-          <Image
-            src={main1}
-            alt=""
-            height={750}
-            width={1400}
-            className="bg-cover "
-          ></Image>
+      <div className="bg-gray-100">
+        <Swiper
+          className="relative items-center mySwiper text-black"
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
+            renderBullet: function (index, className) {
+              return (
+                '<div class="' +
+                className +
+                '"><span>' +
+                bullet[index] +
+                "</span></div>"
+              );
+            },
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          <SwiperSlide>
+            <Image src={ship} alt="" width={1700} height={1000}></Image>
+            <OnImageText
+              smalltext={"혁신, 그리고"}
+              name={"Blue Whale"}
+              subtitle={"Innovatory Mobility"}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <Image
+              src={main1}
+              alt=""
+              width={1700}
+              height={1000}
+              className="bg-cover "
+            ></Image>
+            <OnImageText
+              smalltext={"혁신, 그리고"}
+              name={"Blue Whale"}
+              subtitle={"Innovatory Mobility"}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={drone} alt="" width={1700} height={1000}></Image>
+            <OnImageText
+              smalltext={"혁신, 그리고"}
+              name={"Blue Whale"}
+              subtitle={"Innovatory Mobility"}
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
-          <OnImageText
-            smalltext={"혁신, 그리고"}
-            name={"Blue Whale"}
-            subtitle={"Innovatory Mobility"}
-          />
-        </div>
-      </section>
-
-      <section>
+      <section className="bg-gray-100">
         <div className="text-center pt-3">
           <iframe
             className="items-center mx-auto my-10"
             width="100%"
-            height="600"
+            height={700}
             src="https://www.youtube.com/embed/tU8BuomMd-4"
             title="YouTube video player"
             frameBorder="2"
@@ -82,54 +126,76 @@ const Home: NextPage = () => {
           ></iframe>
         </div>
       </section>
-      {/* <section className="text-center p-4 py-5 bg-white">
-        <h1 className="text-black text-3xl font-sans-kr my-5">
-          분야별 Blue Whale 제품 둘러보기
-        </h1>
-        <div className="relative px-10 py-3 mx-20 grid grid-cols-3 gap-3">
-          <Image src={yacht1} alt="" width={300} height={300}></Image>
-          <Image src={yacht2} alt="" width={300} height={300}></Image>
-          <Image src={yacht3} alt="" width={300} height={300}></Image>
-        </div>
-      </section> */}
 
-      <section>
+      <section className="onImageText">
         <div className="container text-center mx-auto p-4 my-5 mb-5 bg-white">
-          <h1 className="text-black text-3xl font-sans-kr my-5">
+          <h1 className="text-black font-medium text-3xl ibm my-5">
             분야별 Blue Whale 제품 둘러보기
           </h1>
-          <div className="relative grid grid-cols-2 gap-3 place-items-stretch">
-            <Image src={yacht2} alt="" width={300} height={300}></Image>
-            <OnImageText />
+
+          <div className="relative grid grid-cols-2 gap-3 place-items-stretch pb-10">
+            <div className="absolute z-1 inset-x-0 top-20 h-3 text-white right-30">
+              <h2 className="text-xl my-2 ibm">선박</h2>
+              <p className="font-semibold text-6xl Exo 2 my-2">선박</p>
+              <p className="font-light text-3xl Exo 2 my-2">선박</p>
+
+              <div className="button-wrapper">
+                <button
+                  type="button"
+                  className="text-white bg-transparent border border-gray-300 focus:outline-none hover:bg-gray-150 focus:ring-1 focus:ring-gray-200 font-small rounded-full text-xs px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                >
+                  제품 구매
+                </button>
+                <button className="text-white bg-transparent border border-gray-300 focus:outline-none hover:bg-gray-150 focus:ring-1 focus:ring-gray-200 font-small rounded-full text-xs px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                  더 알아보기
+                </button>
+              </div>
+            </div>
+
+            <Image src={drone} alt="" width={300} height={300}></Image>
+            <Image src={car} alt="" width={300} height={300}></Image>
+
             <Image src={boat4} alt="" width={300} height={300}></Image>
-            <OnImageText />
-            <Image src={boat2} alt="" width={300} height={300}></Image>
-            <Image src={boat3} alt="" width={300} height={300}></Image>
+            <Image src={drone6} alt="" width={300} height={300}></Image>
           </div>
-          <h1 className="text-black text-3xl font-sans-kr my-5">블루웨일은 </h1>
-          <h2 className="text-black text-2xl font-sans-kr my-5">
-            항공, 해상의 이동수단을 더 안전하게 더 효율적으로{" "}
-          </h2>
-          <h2 className="text-black text-2xl font-sans-kr my-5">
-            더 안전하게 더 효율적으로{" "}
-          </h2>
-          <h2 className="text-black text-2xl font-sans-kr my-5">
-            환경을 생각하며 새롭게 혁신합니다{" "}
-          </h2>
         </div>
       </section>
 
+      <section className="my-5 text-center pb-10">
+        <h1 className="text-black text-3xl ibm my-5">블루웨일은 </h1>
+        <h2 className="text-black text-2xl ibm my-5">
+          항공, 해상의 이동수단을 더 안전하게 더 효율적으로{" "}
+        </h2>
+        <h2 className="text-black text-2xl font-sans-kr my-5">
+          더 안전하게 더 효율적으로{" "}
+        </h2>
+        <h2 className="text-black text-2xl font-sans-kr my-5">
+          환경을 생각하며 새롭게 혁신합니다{" "}
+        </h2>
+      </section>
+
       <section>
-        <div className="flex flex-col place-content-between justify-items-stretch px-2 sm:px-4 py-10 text-center mx-30 mt-7 p-4 bg-gray-100 text-black">
-          <ul className="flex flex-col place-content-between ">
-            <li>구매처안내</li>
-            <li>고객지원</li>
-            <li>비행안전</li>
-          </ul>
+        <div className="wrapper bg-gray-100">
+          <div className="mx-10 px-10 py-10 items-center ">
+            <div className="flex p-10 items-center justify-center bg-gray-100 text-black ">
+              <div className="mx-auto items-center">
+                <BiBasket size="50" className="mx-auto my-3" />
+                <h1 className="mx-auto ibm font-bold text-2xl ">구매처안내</h1>
+              </div>
+              <div className="mx-auto">
+                <BiPhoneCall size="50" className="mx-auto my-3" />
+                <h1 className="mx-auto ibm font-bold text-2xl">고객지원</h1>
+              </div>
+              <div className="mx-auto">
+                <BiErrorAlt size="50" className="mx-auto my-3" />
+                <h1 className="mx-auto ibm font-bold text-2xl">비행안전</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 
