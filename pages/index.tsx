@@ -142,23 +142,10 @@ const Home: NextPage = () => {
                 <h2 className="text-xl my-2 ibm">선박</h2>
                 <p className="font-semibold text-6xl Exo 2 my-2">선박</p>
                 <p className="font-light text-3xl Exo 2 my-2">선박</p>
-
-                <div className="button-wrapper">
-                  <button
-                    type="button"
-                    className="text-white bg-transparent border border-gray-300 focus:outline-none hover:bg-gray-150 focus:ring-1 focus:ring-gray-200 font-small rounded-full text-xs px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                  >
-                    제품 구매
-                  </button>
-                  <button className="text-white bg-transparent border border-gray-300 focus:outline-none hover:bg-gray-150 focus:ring-1 focus:ring-gray-200 font-small rounded-full text-xs px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                    더 알아보기
-                  </button>
-                </div>
               </div>
 
               <Image src={drone} alt="" width={300} height={300}></Image>
               <Image src={car} alt="" width={300} height={300}></Image>
-
               <Image src={boat4} alt="" width={300} height={300}></Image>
               <Image src={drone6} alt="" width={300} height={300}></Image>
             </div>
