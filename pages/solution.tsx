@@ -19,7 +19,14 @@ const Solution = () => {
             지도에 커서를 올려보세요
           </h1>
         </Fade>
-        <Image src={korea2} width={700} height={850}></Image>
+        <div className="wrap relative">
+          <Image
+            className="target display-block"
+            src={korea2}
+            width={700}
+            height={850}
+          ></Image>
+        </div>
       </div>
       <Footer />
     </div>
