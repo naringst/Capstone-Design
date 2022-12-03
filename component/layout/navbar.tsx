@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={
         color
-          ? "bg-auto sticky top-0 z-50 bg-white text-black px-6 sm:px-4 py-3  dark:bg-gray-900 ibm "
-          : "bg-auto sticky top-0 z-50 bg-transparent px-6 sm:px-4  py-3  dark:bg-gray-900 ibm"
+          ? "bg-auto sticky top-0 z-50 bg-white text-black  dark:text-white px-6 sm:px-4 py-3  dark:bg-gray-900 ibm "
+          : "bg-auto sticky top-0 z-50 bg-transparent px-6 sm:px-4  py-3 dark:text-white dark:bg-gray-900 ibm"
       }
     >
       <div className="relative flex flex-wrap justify-between items-center text-xl ">
