@@ -1,21 +1,27 @@
 import Navbar from "../component/layout/navbar";
-import yacht4 from "../public/yacht4.jpeg";
+
+import korea2 from "../public/korea2.jpg";
 import Image from "next/image";
-import OnImageText from "../component/common/onimagetext";
+
+import Footer from "../component/layout/footer";
+const Fade = require("react-reveal/Fade");
 
 const Solution = () => {
   return (
-    <div className="place-content-cente justify-items-center mx-auto ">
+    <div className="bg-gray-50 text-center">
       <Navbar />
-      <Image src={yacht4} alt="" width={1600} height={700}></Image>
-      <div className="place-content-center justify-items-center place-items-center mx-auto p-20 items-center justify-center flex px-10">
-        <OnImageText
-          className="relative p-10 place-content-center justify-items-center place-items-center mx-20"
-          smalltext=""
-          name={"공공안전"}
-          subtitle={"항공 인사이트로 효과적인 대응"}
-        />
+      <div className="items-center p-20 mx-auto ">
+        <Fade>
+          <h1 className="ibm font-semibold text-4xl m-10 text-start">
+            지금 드론은?
+          </h1>
+          <h1 className="ibm font-medium text-xl m-10 text-start">
+            지도에 커서를 올려보세요
+          </h1>
+        </Fade>
+        <Image src={korea2} width={700} height={850}></Image>
       </div>
+      <Footer />
     </div>
   );
 };
