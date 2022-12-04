@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-
-
 const Footer = () => {
   return (
     <div className="wrapper bg-gray-900 pb-10">

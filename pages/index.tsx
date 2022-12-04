@@ -1,19 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Navbar from "../component/layout/navbar";
-import { Fragment, useState } from "react";
 import Footer from "../component/layout/footer";
-import boat4 from "../public/boat4.jpeg";
-import drone from "../public/drone.jpeg";
-import ship from "../public/ship.jpeg";
-import main1 from "../public/mainPage1.jpg";
-import car from "../public/car.jpeg";
-import drone6 from "../public/drone6.png";
 import OnImageText from "../component/common/onimagetext";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,23 +12,17 @@ import "swiper/css/scrollbar";
 import { BiBasket, BiErrorAlt, BiPhoneCall } from "react-icons/bi";
 import Navbar2 from "../component/layout/navbar2";
 
+// images
+import boat4 from "../public/boat4.jpeg";
+import drone from "../public/drone.jpeg";
+import ship from "../public/ship.jpeg";
+import main1 from "../public/mainPage1.jpg";
+import car from "../public/car.jpeg";
+import drone6 from "../public/drone6.png";
+
 const Fade = require("react-reveal/Fade");
 
 const Home: NextPage = () => {
-  const [imageIndex, setImageIndex] = useState(1);
-
-  const onClickLeft = () => {
-    setImageIndex(imageIndex - 1);
-    //imageIndex에 해당하는 사진 보여주기
-    //나누기 이미지 개수
-    console.log(imageIndex);
-  };
-  const onClickRight = () => {
-    setImageIndex(imageIndex + 1);
-    //imageIndex에 해당하는 사진 보여주기
-    //나누기 이미지 개수
-    console.log(imageIndex);
-  };
   const bullet = ["first", "second", "third"];
 
   return (

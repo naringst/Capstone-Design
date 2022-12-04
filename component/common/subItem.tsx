@@ -1,5 +1,4 @@
 import Image from "next/image";
-import drone3 from "../../public/drone3.jpeg";
 
 const SubItem = (props: any) => {
   return (

@@ -1,8 +1,9 @@
-import Navbar from "../component/layout/navbar";
 import Footer from "../component/layout/footer";
 import Image from "next/image";
 import drone from "../public/drone.jpeg";
+import drone3 from "../public/drone3.jpeg";
 import Navbar2 from "../component/layout/navbar2";
+
 const Around = () => {
   return (
     <div className="">
@@ -20,11 +21,11 @@ const Around = () => {
         <div className="md:px-10 px-10 py-5 my-5 md:py-5 md:m-10 ">
           <div className="flex ibm my-10 px-5">
             <div className="md:m-10">
-              <h1 className="md:text-xl text-base pb-5 px-3">
+              <h1 className="md:text-2xl font-bold text-base pb-5 px-3">
                 블루웨일은 선박, 드론 등 <br />
                 다양한 혁신적인 이동체를 개발하는 회사입니다.
               </h1>
-              <p className="md:text-sm text-xs px-3">
+              <p className="md:text-base text-xs px-3">
                 애플리케이션을 구성하는 컨테이너들의 쉬운 관리 및 발견을 위해서
                 컨테이너들을 논리적인 단위로 그룹화합니다. 쿠버네티스는
                 Google에서 15년간 프로덕션 워크로드 운영한 경험을 토대로
@@ -32,14 +33,26 @@ const Around = () => {
                 결합되어 있습니다.
               </p>
             </div>
-            <Image src={drone} width={800} height={500} />
+            <Image
+              className="rounded-lg"
+              src={drone}
+              width={800}
+              height={500}
+            />
           </div>
 
           <div className="flex md:m-10 px-5">
-            <Image src={drone} width={800} height={500} />
+            <Image
+              className="rounded-lg"
+              src={drone3}
+              width={800}
+              height={500}
+            />
             <div className="md:m-10 ibm">
-              <h1 className="md:text-xl text-base pb-5 px-3">무한한 유연성</h1>
-              <p className="md:text-sm text-xs px-3">
+              <h1 className="md:text-2xl font-bold text-base pb-5 px-3">
+                무한한 유연성
+              </h1>
+              <p className="md:text-base text-sm px-3">
                 지역적인 테스트든지 글로벌 기업 운영이든지 상관없이,
                 쿠버네티스의 유연성은 사용자의 복잡한 니즈를 모두 수용하기
                 때문에 사용자의 애플리케이션들을 끊임없고 쉽게 전달할 수

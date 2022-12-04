@@ -1,9 +1,9 @@
-import OnImageText from "../component/common/onimagetext";
-import Navbar from "../component/layout/navbar";
-import blueback from "../public/blueback.webp";
 import Image from "next/image";
 import SubItem from "../component/common/subItem";
+import Footer from "../component/layout/footer";
+import Navbar2 from "../component/layout/navbar2";
 
+//images
 import yacht3 from "../public/yacht3.jpeg";
 import boat5 from "../public/boat5.jpeg";
 import drone4 from "../public/drone4.jpeg";
@@ -11,8 +11,6 @@ import boat2 from "../public/boat2.jpeg";
 import drone3 from "../public/drone3.jpeg";
 import google from "../public/google.jpeg";
 import blueWhale from "../public/blueWhale.png";
-import Footer from "../component/layout/footer";
-import Navbar2 from "../component/layout/navbar2";
 
 const Fade = require("react-reveal/Fade");
 const Introduction = () => {

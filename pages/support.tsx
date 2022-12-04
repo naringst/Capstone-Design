@@ -1,5 +1,4 @@
 import Footer from "../component/layout/footer";
-import Navbar from "../component/layout/navbar";
 import Image from "next/image";
 import {
   BiKey,
@@ -58,20 +57,20 @@ const Support = () => {
             토스 계정을 잠시 잠그고 싶어요
           </h1>
         </div>
-        <div className="md:flex md:text-sm text-xs mx-auto place-content-stretch text-center">
-          <div className="bg-gray-100 px-10 py-5 mx-auto mt-1 rounded-lg ">
+        <div className="container md:flex md:text-sm text-xs mx-0 place-content-stretch text-center">
+          <div className="bg-gray-100 px-20 py-5 mx-auto mt-2 rounded-lg ">
             <BiGroup className="mx-auto mt-3" size={30} />
             <h1 className="mt-2">명의 도용 신고</h1>
           </div>
-          <div className="bg-gray-100 px-10 py-5 mx-auto mt-1 rounded-lg ">
+          <div className="bg-gray-100 px-20 py-5 mx-auto mt-2 rounded-lg ">
             <BiMessageRoundedError className="mx-auto mt-3" size={30} />
             <h1 className="mt-2">보이스피싱 신고</h1>
           </div>
-          <div className="bg-gray-100 px-10 py-5  mx-auto mt-1 rounded-lg">
+          <div className="bg-gray-100 px-20 py-5  mx-auto mt-2 rounded-lg">
             <BiKey className="mx-auto mt-3" size={30} />
             <h1 className="mt-2">분실/도난/탈취 신고</h1>
           </div>
-          <div className="bg-gray-100 px-10 py-5 mx-auto  mt-1 rounded-lg">
+          <div className="bg-gray-100 px-20 py-5 mx-auto  mt-2 rounded-lg">
             <BiCartAlt className="mx-auto mt-3" size={30} />
             <h1 className="mt-2">중고거래 사기 신고</h1>
           </div>

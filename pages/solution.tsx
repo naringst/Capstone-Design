@@ -1,8 +1,5 @@
-import Navbar from "../component/layout/navbar";
-
 import korea2 from "../public/korea2.jpg";
 import Image from "next/image";
-
 import Footer from "../component/layout/footer";
 import Navbar2 from "../component/layout/navbar2";
 const Fade = require("react-reveal/Fade");
