@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 ## Blue Whale
 블루웨일은 항공, 해상의 이동수단을 더 안전하게 더 효율적으로 환경을 생각하여 새롭게 혁신합니다.
