@@ -19,6 +19,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { BiBasket, BiErrorAlt, BiPhoneCall } from "react-icons/bi";
+import Navbar2 from "../component/layout/navbar2";
 
 const Fade = require("react-reveal/Fade");
 
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
         ></link>
       </Head>
 
-      <Navbar />
+      <Navbar2 />
 
       <div className="bg-gray-100">
         <Swiper
@@ -133,7 +134,7 @@ const Home: NextPage = () => {
       <section className="onImageText">
         <Fade>
           <div className="container text-center mx-auto p-4 my-5 mb-5 bg-white">
-            <h1 className="text-black font-medium text-3xl ibm my-5">
+            <h1 className="ibm text-black font-medium text-3xl  my-5">
               분야별 Blue Whale 제품 둘러보기
             </h1>
 
@@ -153,7 +154,7 @@ const Home: NextPage = () => {
         </Fade>
       </section>
 
-      <section className="my-5 text-center pb-10">
+      <section className="ibm my-5 text-center pb-10">
         <Fade>
           <h1 className="text-black text-3xl ibm my-5">블루웨일은 </h1>
           <h2 className="text-black text-2xl ibm my-5">
