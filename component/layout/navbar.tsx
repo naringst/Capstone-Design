@@ -29,11 +29,11 @@ const Navbar = () => {
     <nav
       className={
         color
-          ? "bg-auto sticky top-0 z-50 bg-white text-black  dark:text-white px-6 sm:px-4 py-3  dark:bg-gray-900 ibm "
-          : "bg-auto sticky top-0 z-50 bg-transparent px-6 sm:px-4  py-3 dark:text-white dark:bg-gray-900 ibm"
+          ? "ibm bg-auto sticky top-0 z-50 bg-white text-black dark:text-white px-6 sm:px-4 py-3  dark:bg-gray-900 "
+          : "ibm bg-auto sticky top-0 z-50 bg-transparent px-6 sm:px-4  py-3 dark:text-white dark:bg-gray-900 "
       }
     >
-      <div className="relative flex flex-wrap justify-between items-center text-xl ">
+      <div className="relative flex flex-wrap justify-between items-center md:text-lg sm:text-base text-sm ">
         <div className="hidden md:flex items-center space-x-1">
           <div className=" w-full md:block md:w-auto mt-0 ">
             <ul className=" flex flex-col mx-20 mt-0 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-xs md:border-0  ">
@@ -67,7 +67,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col mx-20 md:flex-row md:space-x-8 md:mt-0 md:text-xs md:font-medium md:border-0 rounded-lg">
+          <div className="flex flex-col mx-20 md:flex-row md:space-x-8 md:mt-0 md:text-xs md:font-medium md:border-0 rounded-lg ">
             {/*  bg-gray-50  border border-gray-100  md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 */}
 
             <FaSistrix onClick={handleSearchModal} />
@@ -80,8 +80,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
         {/* mobile menu */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center ">
           <button onClick={() => setMenuToggle(!menuToggle)}>
             {menuToggle ? (
               <svg
@@ -116,23 +117,43 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <div className={classNames("md:hidden", { hidden: !menuToggle })}>
-          <Image src={blueWhale} width={100} height={30}></Image>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            회사소개
-          </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            교육
-          </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            전문솔루션
-          </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            둘러보기
-          </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            고객지원
-          </a>
+
+        <div
+          className={classNames("md:hidden justify-between", {
+            hidden: !menuToggle,
+          })}
+        >
+          <div className="justify-center mx-auto px-auto">
+            <Image src={blueWhale} width={100} height={30}></Image>
+
+            <Link href="/introduction">
+              <p className="block py-2 px-4 text-sm hover:bg-gray-200">
+                {" "}
+                회사소개
+              </p>
+            </Link>
+            <Link href="/education">
+              <p className="block py-2 px-4 text-sm hover:bg-gray-200"> 교육</p>
+            </Link>
+            <Link href="/solution">
+              <p className="block py-2 px-4 text-sm hover:bg-gray-200">
+                {" "}
+                전문솔루션
+              </p>
+            </Link>
+            <Link href="/around">
+              <p className="block py-2 px-4 text-sm hover:bg-gray-200">
+                {" "}
+                둘러보기
+              </p>
+            </Link>
+            <Link href="/support">
+              <p className="block py-2 px-4 text-sm hover:bg-gray-200">
+                {" "}
+                고객지원
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
