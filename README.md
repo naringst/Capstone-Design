@@ -10,7 +10,7 @@
 
 ## Getting Started
 
-먼저, 개발 서버를 실행하기 위해 :
+개발 서버를 실행하기 위해 :
 
 ```bash
 npm run dev
