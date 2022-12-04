@@ -12,11 +12,12 @@ import {
 } from "react-icons/bi";
 import secure from "../public/secure.jpeg";
 import Link from "next/link";
+import Navbar2 from "../component/layout/navbar2";
 
 const Support = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar2 />
       <div className="justify-items-center md:px-20 py-10 p-auto bg-[#ecfdf5] mx-auto ">
         <div className="ibm text-center font-semibold md:text-5xl sm:text-4xl text-3xl md:px-20 md:py-5 mx-auto md:mx-20 my-5">
           <h1 className=" leading-tight">
