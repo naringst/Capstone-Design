@@ -12,14 +12,15 @@ import drone3 from "../public/drone3.jpeg";
 import google from "../public/google.jpeg";
 import blueWhale from "../public/blueWhale.png";
 import Footer from "../component/layout/footer";
+import Navbar2 from "../component/layout/navbar2";
 
 const Fade = require("react-reveal/Fade");
 const Introduction = () => {
   return (
-    <div className="">
-      <Navbar />
-      <div className="bg-blue-50">
-        <div className="pt-5 mx-auto my-auto text-center  bg-blue-50">
+    <div className="bg-blue-50">
+      <Navbar2 />
+      <div className="">
+        <div className="py-5 mx-auto my-auto text-center  bg-blue-50">
           <h1 className="py-1 my-1 mx-auto font-extrabold text-3xl ibm ">
             Innovatory Blue Whale
           </h1>
@@ -29,9 +30,9 @@ const Introduction = () => {
           </button>
         </div>
 
-        <div className="relative text-center pt-0 mt-0 bg-gray-50 ">
+        <div className="relative text-center pt-0 mt-0 ">
           <video
-            className="items-center mx-auto my-10"
+            className="items-center my-0"
             width="100%"
             height={300}
             autoPlay
@@ -41,12 +42,12 @@ const Introduction = () => {
             <source src="wave.mp4" type="video/mp4"></source>
           </video>
 
-          <div className="absolute z-1 inset-x-0 top-40 mx-30 align-middle text-white smoothappear">
+          <div className="absolute z-1 inset-x-0 md:top-30 sm:top-20 top-10 mx-30 align-middle text-white smoothappear">
             <Fade>
-              <p className="mt-0 font-semibold text-6xl ibm 2 my-2 leading-loose">
+              <p className="font-semibold md:pt-10 md:text-6xl sm:text-4xl text-2xl ibm leading-loose">
                 블루웨일은
               </p>
-              <p className=" font-semibold text-4xl ibm 2 my-2 leading-relaxed">
+              <p className=" font-semibold md:text-4xl sm:text-2xl text-xl ibm pb-1 mb-2 md:leading-relaxed sm:leading-relaxed leading-relaxed">
                 <br />
                 항공, 해상의 이동수단을
                 <br />
@@ -61,29 +62,26 @@ const Introduction = () => {
         </div>
       </div>
 
-      <div className="text-center pt-10 mt-0 bg-gray-50">
-        <video
-          className="items-center mx-auto my-10"
-          width="100%"
-          autoPlay
-          muted
-          loop
-        >
-          <source src="kiwa.mp4" type="video/mp4"></source>
-        </video>
+      <div className="text-center pt-20 mt-0 bg-gray-50">
+        <Fade>
+          <video className="items-center" width="100%" autoPlay muted loop>
+            <source src="kiwa.mp4" type="video/mp4"></source>
+          </video>
+        </Fade>
       </div>
-      <div className="bg-gray-50 p-20 m-20">
-        <div className="text-center mx-20 my-10 px-20 py-10 ">
+
+      <div className="md:p-10 md:mx-10 p-auto m-auto">
+        <div className="text-center md:m-10 m-10 md:p-10 ">
           <Fade>
-            <p className="font-semibold text-3xl ibm 2 my-2 leading-loose">
+            <p className="font-semibold my-2 leading-loose md:text-3xl md:leading-loose sm:text-2xl sm:leading-loose text-xl ibm 2 ">
               세상의 문제를
               <br />
               단순히 해결하는 사람, 서비스가 아닌
             </p>
-            <p className="font-semibold text-5xl ibm 2 my-2 leading-loose">
+            <p className="font-semibold my-2 leading-loose md:text-5xl sm:text-3xl text-2xl ibm 2  ">
               문화를 만드는 기업
             </p>
-            <p className="font-semibold text-3xl ibm 2 my-2 leading-loose">
+            <p className="font-semibold my-2  leading-loose md:text-3xl md:leading-loose sm:text-2xl sm:leading-loose text-xl ibm 2 ">
               그것이 우리가 추구하는 목표입니다.
             </p>
           </Fade>
@@ -92,27 +90,60 @@ const Introduction = () => {
 
       {/* background Image */}
 
-      <div className="relative text-center pt-0 mt-0 bg-gray-50">
-        <Image src={blueback} alt="" width={2000} height={1000}></Image>
-        <div className="absolute z-1 inset-x-0 top-40 mx-30 align-middle text-white smoothappear">
-          <h1 className="font-semibold text-3xl Exo2 my-2">
+      <div className=" p-0 m-0 bg-darkBlue md:p-10 ">
+        <div className="mx-auto md:p-20 p-10 align-middle text-white smoothappear">
+          <h1 className="text-start leading-relaxed mx-auto md:px-2 font-semibold md:text-3xl sm:text-2xl  text-xl ibm my-2 ">
             변화를 열망하는 사람들이 모여,
             <br />
             역사에 남을만한 변화를 만듭니다.
           </h1>
-          <h2 className="font-semibold text-2xl Exo 2 my-2">
-            BlueWhale은 오늘도
-            <br />
-            위대한 역사를 만들고 있습니다
-          </h2>
+
+          <div className="flex text-start ">
+            <div className="text-start  md:mt-10 m-auto">
+              <h5 className="font-light md:px-0 md:text-xl sm:text-lg text-normal ibm my-2">
+                누적 가입자 수
+              </h5>
+              <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl ibm my-2 ">
+                2,200만+
+              </h1>
+            </div>
+
+            <div className="text-start  md:mt-10 mx-auto">
+              <h5 className="font-light md:px-2 md:text-xl sm:text-lg text-normal ibm my-2 ">
+                누적 투자금액
+              </h5>
+              <h1 className="font-semibold md:px-2 md:text-5xl sm:text-2xl text-xl ibm my-2">
+                1조원 +
+              </h1>
+            </div>
+          </div>
+          <div className="flex text-start ">
+            <div className="text-start  md:mt-10 m-auto">
+              <h5 className="font-light md:px-0 md:text-xl sm:text-lg text-normal ibm my-2">
+                전체 팀원 수
+              </h5>
+              <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl ibm my-2 ">
+                1,500명+
+              </h1>
+            </div>
+
+            <div className="text-start  md:mt-10 mx-auto">
+              <h5 className="font-light md:px-2 md:text-xl sm:text-lg text-normal ibm my-2 ">
+                출시 서비스 수
+              </h5>
+              <h1 className="font-semibold md:px-2 md:text-5xl sm:text-2xl text-xl ibm my-2">
+                50개+
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="p-20">
-        <h1 className="font-semibold text-5xl ibm text-center">
+        <h1 className="font-semibold md:text-5xl sm:text-4xl text-2xl ibm text-center">
           블루웨일이 바꿀 세상
         </h1>
-        <h4 className="font-light text-xl ibm  text-center my-5">
+        <h4 className="font-light md:text-xl sm:text-lg text-normal ibm  text-center my-5">
           세상을 아우를 수 있는 문화를 만들고자 합니다
         </h4>
         <div className="">
@@ -136,18 +167,12 @@ const Introduction = () => {
           />
         </div>
       </div>
-      <div className="bg-gray-50 p-20 content-center">
-        <h1 className="font-semibold text-4xl ibm text-center m-20 leading-normal">
+      <div className="bg-gray-50 md:p-20 px-auto py-4 content-center">
+        <h1 className="font-semibold md:text-4xl sm:text-3xl text-2xl ibm text-center md:m-20 m-10 leading-normal md:leading-normal sm:leading-normal">
           세계적인 투자자들이 <br />
           블루웨일과 함께합니다
         </h1>
-        <div className="flex justify-between mx-20 px-20">
-          <Image src={google} width={200} height={120} />
-          <Image src={blueWhale} width={200} height={120} />
-          <Image src={google} width={200} height={120} />
-          <Image src={blueWhale} width={200} height={120} />
-        </div>
-        <div className="flex justify-between m-20 px-20">
+        <div className="md:flex justify-between md:mx-20  md:pb-10 md:px-3  ">
           <Image src={google} width={200} height={120} />
           <Image src={blueWhale} width={200} height={120} />
           <Image src={google} width={200} height={120} />
